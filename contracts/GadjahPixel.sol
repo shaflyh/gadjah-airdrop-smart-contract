@@ -20,7 +20,7 @@ contract GadjahPixel is ERC721, Ownable {
 
     mapping(address => uint256) public addressMintBalance;
 
-    constructor() ERC721("Gadjah Test", "GDJHT") {
+    constructor() ERC721("Gadjah Pixel", "GDJHX") {
         setContractAddress(0x60C0CFbA6F79142aDAbA3130c915D33d82fea86D);
     }
 
