@@ -14,13 +14,14 @@ contract GadjahPixel is ERC721, Ownable {
 
     string public baseURI = "";
     string public baseExtension = ".json";
-    uint256 public maxSupply = 100;
+    uint256 public maxSupply = 4828;
     bool public paused = false;
     address public contractAddress; // Gadjah Society Contract Address
 
     mapping(address => uint256) public addressMintBalance;
 
     constructor() ERC721("Gadjah Pixel", "GDJHX") {
+        // 0x88e7Bd25F1b7315a48Fcfa07d982DE05BE097FA3
         setContractAddress(0x60C0CFbA6F79142aDAbA3130c915D33d82fea86D);
     }
 
@@ -57,13 +58,10 @@ contract GadjahPixel is ERC721, Ownable {
 
             if (currentTokenOwner == _owner) {
                 ownedTokenIds[ownedTokenIndex] = currentTokenId;
-
                 ownedTokenIndex++;
             }
-
             currentTokenId++;
         }
-
         return ownedTokenIds;
     }
 
