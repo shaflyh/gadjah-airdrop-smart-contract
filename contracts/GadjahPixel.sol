@@ -26,7 +26,7 @@ contract GadjahPixel is ERC721, Ownable {
 
     // Public function //
 
-    function mint(uint256 _tokenId) public payable {
+    function mint(uint256 _tokenId) public {
         require(!paused, "The contract is paused!");
         require(contractAddress != address(0), "Contract address not set yet");
         require(
